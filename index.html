@@ -41,4 +41,42 @@
         <button type="submit" class="submit-btn">Send Message</button>
         <div id="formStatus" class="form-status"></div>
     </form>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitButton = form.querySelector('.submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            formStatus.textContent = '';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    formStatus.textContent = 'Message sent successfully!';
+                    formStatus.style.color = 'green';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                formStatus.textContent = 'Failed to send message. Please try again.';
+                formStatus.style.color = 'red';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+        });
+    </script>
 // ... existing code ...
