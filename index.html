@@ -1,82 +1,312 @@
-// ... existing code ...
-    <!-- Important: Add this hidden form for Netlify to detect -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <select name="service"></select>
-        <textarea name="message"></textarea>
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Design Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Your Logo</div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#features">What We Do</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="cta-button">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Your visible form -->
-    <form 
-        class="contact-form" 
-        id="contactForm" 
-        name="contact" 
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field">
-        <p class="hidden">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-        </p>
-        <input type="hidden" name="form-name" value="contact" />
-        
-        <div class="form-group">
-            <input type="text" name="name" placeholder="Name" required>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Crafting Digital Excellence</h1>
+                <p>Where Innovation Meets Design</p>
+                <a href="#contact" class="cta-button">Start Your Project</a>
+            </div>
         </div>
-        <div class="form-group">
-            <input type="email" name="email" placeholder="Email" required>
-        </div>
-        <div class="form-group">
-            <select name="service" required>
-                <option value="" disabled selected>Select Service</option>
-                <option value="web">Web Development</option>
-                <option value="brand">Brand Design</option>
-                <option value="app">App Design</option>
-                <option value="marketing">Digital Marketing</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <textarea name="message" placeholder="Tell us about your project" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message</button>
-        <div id="formStatus" class="form-status"></div>
-    </form>
+    </section>
 
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>What We Do</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and engaging user experiences that captivate and convert</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Brand Identity</h3>
+                    <p>Developing unique and memorable brand identities that stand out</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Design</h3>
+                    <p>Building responsive and modern websites that perform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="work" class="work-section">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="work-grid">
+                <div class="work-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>A brief description of Project 1.</p>
+                </div>
+                <div class="work-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>A brief description of Project 2.</p>
+                </div>
+                <div class="work-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>A brief description of Project 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with modern technologies that drive results. From simple landing pages to complex e-commerce solutions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> Performance Focused</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Brand Design</h3>
+                    <p>Complete brand identity design that tells your story. We create cohesive branding that makes you stand out.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Logo Design</li>
+                        <li><i class="fas fa-check"></i> Brand Guidelines</li>
+                        <li><i class="fas fa-check"></i> Marketing Materials</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>App Design</h3>
+                    <p>User-friendly mobile applications that engage your audience. We create intuitive experiences across all platforms.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> UI/UX Design</li>
+                        <li><i class="fas fa-check"></i> Cross-platform</li>
+                        <li><i class="fas fa-check"></i> User Testing</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategic digital marketing that grows your business. We help you reach and engage your target audience.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Social Media</li>
+                        <li><i class="fas fa-check"></i> Content Strategy</li>
+                        <li><i class="fas fa-check"></i> Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"Their creative approach transformed our brand completely. The team's attention to detail and innovative solutions exceeded our expectations."</p>
+                    <div class="testimonial-author">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, TechStart Inc.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"Working with this team was a game-changer for our online presence. They delivered a website that perfectly captures our vision."</p>
+                    <div class="testimonial-author">
+                        <h4>Mark Williams</h4>
+                        <p>Founder, Innovate Labs</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"The design team's creativity and professionalism made our rebranding process smooth and successful. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <h4>Emily Chen</h4>
+                        <p>Marketing Director, Pulse Media</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's Create Something Amazing</h3>
+                    <p>Ready to transform your digital presence? We'd love to hear about your project.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@yourdesignagency.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span>123 Creative Street, Design City</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="your-server-endpoint" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="" disabled selected>Select Service</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="brand-design">Brand Design</option>
+                            <option value="app-design">App Design</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Tell us about your project" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Design Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add this just before closing body tag -->
     <script>
-        const form = document.getElementById('contactForm');
-        const formStatus = document.getElementById('formStatus');
-        const submitButton = form.querySelector('.submit-btn');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Toggle icon between bars and times
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
             
-            submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-            formStatus.textContent = '';
-
-            try {
-                const formData = new FormData(form);
-                const response = await fetch('/', {
-                    method: 'POST',
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString()
-                });
-
-                if (response.ok) {
-                    form.reset();
-                    formStatus.textContent = 'Message sent successfully!';
-                    formStatus.style.color = 'green';
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Log the data (for testing)
+            console.log('Form Data:', data);
+            
+            // Here you would typically send the data to your server
+            // Example using fetch:
+            /*
+            fetch('your-server-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Handle success (e.g., show success message)
+            })
+            .catch((error) => {
                 console.error('Error:', error);
-                formStatus.textContent = 'Failed to send message. Please try again.';
-                formStatus.style.color = 'red';
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = 'Send Message';
-            }
+                // Handle error (e.g., show error message)
+            });
+            */
+            
+            // For now, just show an alert
+            alert('Form submitted successfully!\n\nName: ' + data.name + 
+                  '\nEmail: ' + data.email + 
+                  '\nService: ' + data.service + 
+                  '\nMessage: ' + data.message);
+            
+            // Optional: Clear the form
+            this.reset();
         });
     </script>
-// ... existing code ...
+</body>
+</html>
