@@ -212,7 +212,10 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <input type="hidden" name="form-name" value="contact">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Name" required>
@@ -266,47 +269,6 @@
                 icon.classList.add('fa-bars');
                 icon.classList.remove('fa-times');
             });
-        });
-
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Log the data (for testing)
-            console.log('Form Data:', data);
-            
-            // Here you would typically send the data to your server
-            // Example using fetch:
-            /*
-            fetch('your-server-endpoint', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                // Handle success (e.g., show success message)
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                // Handle error (e.g., show error message)
-            });
-            */
-            
-            // For now, just show an alert
-            alert('Form submitted successfully!\n\nName: ' + data.name + 
-                  '\nEmail: ' + data.email + 
-                  '\nService: ' + data.service + 
-                  '\nMessage: ' + data.message);
-            
-            // Optional: Clear the form
-            this.reset();
         });
     </script>
 </body>
