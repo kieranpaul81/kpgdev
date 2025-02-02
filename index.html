@@ -27,7 +27,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">Your Logo</div>
+            <div class="logo">kpg&co</div>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -279,6 +279,33 @@
                 icon.classList.add('fa-bars');
                 icon.classList.remove('fa-times');
             });
+        });
+    </script>
+
+    <!-- Add this just before the closing body tag, after the existing script -->
+    <script>
+        // Fade in sections on scroll
+        const sections = document.querySelectorAll('section');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        // Add fade-in class and observe each section
+        sections.forEach(section => {
+            section.classList.add('fade-in');
+            sectionObserver.observe(section);
         });
     </script>
 </body>
