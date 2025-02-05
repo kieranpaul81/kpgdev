@@ -3,310 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kpg&co - Website Design & Development</title>
+    <title>Modern Web Design Agency</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- A hidden form that Netlify can detect -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <select name="service">
-            <option value="web-development">Web Development</option>
-            <option value="brand-design">Brand Design</option>
-            <option value="app-design">App Design</option>
-            <option value="digital-marketing">Digital Marketing</option>
-        </select>
-        <textarea name="message"></textarea>
-    </form>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">kpg&co</div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#" class="logo-text" id="home-link">kpgdev<span>.</span></a>
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="nav-links" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
-            <ul class="nav-links">
-                <li><a href="#features">What We Do</a></li>
-                <li><a href="#work">Our Work</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact" class="cta-button">Contact Us</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#what-we-do">What We do</a></li>
+                <li><a href="#our-work">Our Work</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-overlay"></div>
+    <section class="hero section">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1>Crafting Digital Excellence</h1>
-                <p>Where Innovation Meets Design</p>
-                <a href="#contact" class="cta-button">Start Your Project</a>
+            <h1>We Create<br><span>Digital Experiences</span></h1>
+            <p>Transform your vision into reality with our cutting-edge web design solutions.</p>
+            <div class="hero-buttons">
+                <a href="#" class="primary-btn">Get In touch</a>
+                <a href="#" class="secondary-btn">What We Do</a>
             </div>
+        </div>
+        <div class="abstract-bg">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-5"></div>
+        </div>
+        <div class="scroll-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features-section">
-        <div class="container">
-            <h2>What We Do</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Creating intuitive and engaging user experiences that captivate and convert</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-layer-group"></i>
-                    <h3>Brand Identity</h3>
-                    <p>Developing unique and memorable brand identities that stand out</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Design</h3>
-                    <p>Building responsive and modern websites that perform</p>
-                </div>
+    <section class="what-we-do section" id="what-we-do">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>What We Do<span>.</span></h2>
+                <p class="section-subtitle">Crafting digital solutions that drive results</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Our Work Section -->
-    <section id="work" class="work-section">
-        <div class="container">
-            <h2>Our Work</h2>
-            <div class="work-grid">
-                <div class="work-card">
-                    <img src="https://via.placeholder.com/300" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>A brief description of Project 1.</p>
-                </div>
-                <div class="work-card">
-                    <img src="https://via.placeholder.com/300" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>A brief description of Project 2.</p>
-                </div>
-                <div class="work-card">
-                    <img src="https://via.placeholder.com/300" alt="Project 3">
-                    <h3>Project 3</h3>
-                    <p>A brief description of Project 3.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-desktop"></i>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16.5V14.5M7 21H17C19.2091 21 21 19.2091 21 17V7C21 4.79086 19.2091 3 17 3H7C4.79086 3 3 4.79086 3 7V17C3 19.2091 4.79086 21 7 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Custom websites built with modern technologies that drive results. From simple landing pages to complex e-commerce solutions.</p>
+                    <h3>Web Design</h3>
+                    <p>Creating beautiful, responsive websites that engage your audience and drive results. We focus on user experience and modern design principles.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Responsive Design</li>
-                        <li><i class="fas fa-check"></i> SEO Optimization</li>
-                        <li><i class="fas fa-check"></i> Performance Focused</li>
+                        <li>Responsive Design</li>
+                        <li>User Experience</li>
+                        <li>Visual Design</li>
                     </ul>
                 </div>
-
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-pencil-ruler"></i>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 7.82959L18.6965 9.35641C20.239 10.7447 21 12.6946 21 14.7298V17C21 19.2091 19.2091 21 17 21H7C4.79086 21 3 19.2091 3 17V14.7298C3 12.6946 3.76098 10.7447 5.30354 9.35641L7 7.82959M12 3V17M12 3L8 7M12 3L16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <h3>Brand Design</h3>
-                    <p>Complete brand identity design that tells your story. We create cohesive branding that makes you stand out.</p>
+                    <h3>Development</h3>
+                    <p>Building robust, scalable web applications with modern technologies. We create solutions that perform and scale.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Logo Design</li>
-                        <li><i class="fas fa-check"></i> Brand Guidelines</li>
-                        <li><i class="fas fa-check"></i> Marketing Materials</li>
+                        <li>Custom Development</li>
+                        <li>Performance Optimization</li>
+                        <li>API Integration</li>
                     </ul>
                 </div>
-
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.31993 13.28L12.0099 15.97L14.6999 13.28M4.61993 10.59L19.3799 10.59M7.30993 4.59L16.6899 4.59C17.9899 4.59 19.3799 5.55 19.3799 7.79V16.21C19.3799 18.45 17.9899 19.41 16.6899 19.41H7.30993C6.00993 19.41 4.61993 18.45 4.61993 16.21V7.79C4.61993 5.55 6.00993 4.59 7.30993 4.59Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <h3>App Design</h3>
-                    <p>User-friendly mobile applications that engage your audience. We create intuitive experiences across all platforms.</p>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting intuitive user experiences that delight and convert. We create interfaces that users love to interact with.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> UI/UX Design</li>
-                        <li><i class="fas fa-check"></i> Cross-platform</li>
-                        <li><i class="fas fa-check"></i> User Testing</li>
+                        <li>User Research</li>
+                        <li>Interface Design</li>
+                        <li>Prototyping</li>
                     </ul>
                 </div>
-
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 7.5L12 2L3 7.5M21 7.5L12 13M21 7.5V16.5L12 22M3 7.5L12 13M3 7.5V16.5L12 22M12 13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <h3>Digital Marketing</h3>
-                    <p>Strategic digital marketing that grows your business. We help you reach and engage your target audience.</p>
+                    <h3>Social Media</h3>
+                    <p>Strategic social media management to grow your brand and engage with your audience effectively.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Social Media</li>
-                        <li><i class="fas fa-check"></i> Content Strategy</li>
-                        <li><i class="fas fa-check"></i> Analytics</li>
+                        <li>Content Strategy</li>
+                        <li>Community Management</li>
+                        <li>Analytics & Growth</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p class="testimonial-text">"Their creative approach transformed our brand completely. The team's attention to detail and innovative solutions exceeded our expectations."</p>
-                    <div class="testimonial-author">
-                        <h4>Sarah Johnson</h4>
-                        <p>CEO, TechStart Inc.</p>
+    <section class="about section" id="about">
+        <div class="about-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="dot-grid"></div>
+        </div>
+        <div class="section-content">
+            <div class="section-header">
+                <h2>About Us<span>.</span></h2>
+                <p class="section-subtitle">Building digital excellence since 2019</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead reveal-text">We're a passionate team of digital craftspeople who believe in creating exceptional web experiences.</p>
+                    <p class="reveal-text">Our journey began with a simple mission: to help businesses thrive in the digital world. Today, we combine creativity, technology, and strategy to deliver websites that not only look stunning but drive real business results.</p>
+                    <p class="reveal-text">Every project is an opportunity to push boundaries and create something remarkable. We pride ourselves on attention to detail, innovative solutions, and a collaborative approach that puts our clients at the heart of everything we do.</p>
+                    <div class="about-stats">
+                        <div class="stat-item" data-value="50">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                            <span class="stat-desc">Successfully completed</span>
+                        </div>
+                        <div class="stat-item" data-value="30">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Happy Clients</span>
+                            <span class="stat-desc">Across industries</span>
+                        </div>
+                        <div class="stat-item" data-value="5">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-desc">Of digital excellence</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
+                <div class="monitor-container">
+                    <div class="monitor">
+                        <div class="monitor-screen">
+                            <div class="website-layout">
+                                <div class="site-header">
+                                    <div class="nav-item"></div>
+                                    <div class="nav-item"></div>
+                                    <div class="nav-item"></div>
+                                </div>
+                                <div class="site-hero">
+                                    <div class="hero-content-mock">
+                                        <div class="hero-title"></div>
+                                        <div class="hero-text"></div>
+                                        <div class="hero-button"></div>
+                                    </div>
+                                </div>
+                                <div class="site-grid">
+                                    <div class="grid-item"></div>
+                                    <div class="grid-item"></div>
+                                    <div class="grid-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="monitor-stand">
+                            <div class="stand-neck"></div>
+                            <div class="stand-base"></div>
+                        </div>
                     </div>
-                    <p class="testimonial-text">"Working with this team was a game-changer for our online presence. They delivered a website that perfectly captures our vision."</p>
-                    <div class="testimonial-author">
-                        <h4>Mark Williams</h4>
-                        <p>Founder, Innovate Labs</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p class="testimonial-text">"The design team's creativity and professionalism made our rebranding process smooth and successful. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <h4>Emily Chen</h4>
-                        <p>Marketing Director, Pulse Media</p>
+                    <div class="floating-icons">
+                        <div class="tech-icon html">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M12 18.178l4.62-1.256.623-6.778H9.026L8.822 7.89h8.626l.227-2.211H6.325l.636 6.678h7.82l-.261 2.866-2.52.667-2.52-.667-.158-1.844h-2.27l.329 3.544L12 18.178zM3 2h18l-1.623 18L12 22l-7.377-2L3 2z"/>
+                            </svg>
+                        </div>
+                        <div class="tech-icon css">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M12 18.178l4.62-1.256.623-6.778H9.026L8.822 7.89h8.626l.227-2.211H6.325l.636 6.678h7.82l-.261 2.866-2.52.667-2.52-.667-.158-1.844h-2.27l.329 3.544L12 18.178zM3 2h18l-1.623 18L12 22l-7.377-2L3 2z"/>
+                            </svg>
+                        </div>
+                        <div class="tech-icon js">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Let's Create Something Amazing</h3>
-                    <p>Ready to transform your digital presence? We'd love to hear about your project.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>hello@yourdesignagency.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-location-dot"></i>
-                            <span>123 Creative Street, Design City</span>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" name="contact" method="POST">
-                    <input type="hidden" name="form-name" value="contact">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <select name="service" required>
-                            <option value="" disabled selected>Select Service</option>
-                            <option value="web-development">Web Development</option>
-                            <option value="brand-design">Brand Design</option>
-                            <option value="app-design">App Design</option>
-                            <option value="digital-marketing">Digital Marketing</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Tell us about your project" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Design Agency. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Add this just before closing body tag -->
     <script>
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navToggle = document.querySelector('.mobile-nav-toggle');
         const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li');
+        const whatWeDoSection = document.querySelector('.what-we-do');
+        const whatWeDoLinks = document.querySelectorAll('a[href="#what-we-do"], .secondary-btn');
+        const scrollArrow = document.querySelector('.scroll-arrow');
+        const hero = document.querySelector('.hero');
+        const header = document.querySelector('.header');
+        const homeLink = document.querySelector('#home-link');
+        const ourWorkSection = document.querySelector('.our-work');
+        const ourWorkLinks = document.querySelectorAll('a[href="#our-work"]');
 
-        mobileMenuBtn.addEventListener('click', () => {
+        // Add index to nav items for staggered animation
+        navItems.forEach((item, index) => {
+            item.style.setProperty('--item-nr', index + 1);
+        });
+
+        // Mobile nav toggle
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
             navLinks.classList.toggle('active');
-            // Toggle icon between bars and times
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
         });
 
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
+        // Function to handle scroll
+        function handleScroll() {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const whatWeDoOffset = whatWeDoSection.offsetTop - windowHeight / 2;
+
+            // Add/remove active class based on scroll position
+            if (scrollPosition > whatWeDoOffset) {
+                whatWeDoSection.classList.add('active');
+                scrollArrow.classList.add('hidden');
+            } else {
+                whatWeDoSection.classList.remove('active');
+                scrollArrow.classList.remove('hidden');
+            }
+
+            // Parallax effect
+            hero.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        }
+
+        // Function to show What We Do section
+        function showWhatWeDo(e) {
+            if (e) e.preventDefault();
+            
+            const whatWeDoOffset = whatWeDoSection.offsetTop;
+            window.scrollTo({
+                top: whatWeDoOffset,
+                behavior: 'smooth'
+            });
+
+            // Close mobile menu if open
+            if (navLinks.classList.contains('active')) {
+                navToggle.setAttribute('aria-expanded', 'false');
                 navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
+            }
+        }
+
+        // Add click handlers for all What We Do triggers
+        whatWeDoLinks.forEach(link => {
+            link.addEventListener('click', showWhatWeDo);
+        });
+
+        // Update scroll arrow to trigger What We Do section
+        scrollArrow.addEventListener('click', showWhatWeDo);
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Add click handler for the logo
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
-    </script>
 
-    <!-- Add this just before the closing body tag, after the existing script -->
-    <script>
-        // Fade in sections on scroll
-        const sections = document.querySelectorAll('section');
-        
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-
-        const sectionObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Only animate once
-                }
+        // Add this function after showWhatWeDo function
+        function showOurWork(e) {
+            if (e) e.preventDefault();
+            
+            const ourWorkOffset = ourWorkSection.offsetTop;
+            window.scrollTo({
+                top: ourWorkOffset,
+                behavior: 'smooth'
             });
-        }, observerOptions);
 
-        // Add fade-in class and observe each section
-        sections.forEach(section => {
-            section.classList.add('fade-in');
-            sectionObserver.observe(section);
+            // Close mobile menu if open
+            if (navLinks.classList.contains('active')) {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
+            }
+        }
+
+        // Add this with the other event listeners
+        ourWorkLinks.forEach(link => {
+            link.addEventListener('click', showOurWork);
         });
     </script>
 </body>
-</html>
+</html> 
